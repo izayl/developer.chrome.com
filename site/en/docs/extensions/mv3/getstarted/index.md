@@ -317,13 +317,14 @@ programmatic injection allows for user-invoked content scripts, instead of auto 
 code into web pages.
 
 The manifest will need the [`activeTab`][25] permission to allow the extension temporary access to
-the [`tabs`][26] API. This enables the extension to call [`tabs.executeScript`][27].
+the [`tabs`][26] API. This enables the extension to call [`tabs.executeScript`][27].Additional, 
+`scripting` permission also be includeed to use [`chrome.scripting`][34]
 
 ```json
 {
   "name": "Getting Started Example",
 ...
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": ["activeTab", "declarativeContent", "storage", "scripting"],
 ...
 }
 ```
@@ -462,3 +463,4 @@ What's next?
 [31]: /docs/extensions/mv3/tut_debugging
 [32]: /docs//extensions/reference
 [33]: /docs/extensions/mv3/devguide
+[34]: /docs/extensions/reference/scripting
